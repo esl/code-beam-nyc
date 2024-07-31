@@ -1,5 +1,5 @@
 ---
-name: David Lucia
+name: Dave Lucia
 pic_url: "/assets/images/david_lucia.jpg"
 tagline: Kept Elixirin', CTO @ Bitfo
 github: ''

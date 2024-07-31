@@ -1,8 +1,8 @@
-title: Code BEAM Lite Stockholm
+title: Code BEAM Lite NYC
 description: > # this means to ignore newlines until "baseurl:"
-  Code BEAM Lite Stockholm is the premiere Erlang and Elixir conference in the Nordics - one day of first-rate BEAM-related talks.
+  Code BEAM Lite NYC is a one-day Erlang and Elixir conference in New York City - following in the footsteps of EMPEX.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://codebeamstockholm.com" # the base hostname & protocol for your site
+url: "https://codebeamnyc.com" # the base hostname & protocol for your site
 
 logo: "./assets/images/logo2022.png"
 
@@ -89,7 +89,7 @@ defaults:
 # Google Map JS api
 # This is my api for this template
 key-api: AIzaSyBf-F7nBzxi_73uI9QUxRQ-cNihYtlZ_AA
-map-text: 7A Odenplan
-map-text-location: Norrtullsgatan 6, 113 26 Stockholm, Sweden
-map-lat: 59.34252302986197
-map-lng: 18.051692626812088
+map-text: Littlefield
+map-text-location: 635 Sackett St, Brooklyn, NY 11217, United States
+map-lat: 40.67875709829897
+map-lng: -73.98338124907563
