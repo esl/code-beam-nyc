@@ -1,6 +1,6 @@
 title: Code BEAM Lite NYC
 description: > # this means to ignore newlines until "baseurl:"
-  Code BEAM Lite NYC is a one-day Erlang and Elixir conference in New York City - following in the footsteps of EMPEX.
+  Code BEAM Lite NYC is a one-day Erlang and Elixir conference in New York City.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://codebeamnyc.com" # the base hostname & protocol for your site
 
