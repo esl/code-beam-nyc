@@ -1,6 +1,6 @@
 ---
 name: Dave Lucia
-pic_url: "/assets/images/Dave_Lucia.jpg"
+pic_url: "/assets/images/dave-lucia.jpg"
 tagline: "TV Labs CTO"
 twitter: davydog187
 linkedin: /in/david-lucia-a395441b/
