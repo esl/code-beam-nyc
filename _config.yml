@@ -1,6 +1,6 @@
-title: A full-day Erlang and Elixir conference in New York City - Nov 15 2024.
+title:
 description: # this means to ignore newlines until "baseurl:"
-  
+  A full-day Erlang and Elixir conference in New York City - Nov 15 2024.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://codebeamnyc.com" # the base hostname & protocol for your site
 
