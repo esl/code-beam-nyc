@@ -5,7 +5,7 @@ experience:
 name: Architecting Reactive Systems for Scalability and Reliability
 type: tutorial
 trainers:
-- _participants/Francesco-cesarini.md
+- _participants/francesco-cesarini.md
 
 ---
 Learn how to architect fault-tolerant, scalable, soft, real-time systems with requirements for high availability.
