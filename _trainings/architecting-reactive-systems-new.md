@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 experience:
 - Intermediate
 name: Architecting Reactive Systems for Scalability and Reliability
