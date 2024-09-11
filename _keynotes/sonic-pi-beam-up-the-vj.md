@@ -5,6 +5,7 @@ tags: []
 title: Sonic Pi - BEAM up the VJ
 speakers:
 - _participants/sam-aaron.md
+published: false
 
 ---
 Sonic Pi is a free code-based music creation and performance tool that targets both education and professional musicians. It is possible for beginners to code fresh beats, driving bass lines and shimmering synth riffs. All this whilst teaching core computer science concepts such as sequencing, functions, variables, loops, data structures and algorithms.
