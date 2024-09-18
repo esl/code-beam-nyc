@@ -1,6 +1,6 @@
 ---
 name: Mackenzie Morgan
-pic_url: "/assets/images/mackenzie_morgan-1.jpg"
+pic_url: "/assets/images/mackenzie-morgan.jpg"
 tagline: Senior Software Engineer at NextRoll
 github: maco
 linkedin: /in/mackenziemorgan/
