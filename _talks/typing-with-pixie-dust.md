@@ -7,7 +7,7 @@ tags:
 - TechDebt
 title: Typing with pixie dust
 speakers:
-- _participants/mackenzie-morgan.md
+
 
 ---
 Legacy code. It can be...fragile. It really helps if you can already be sure what types your functions expect and return, but what if past-you didn't include type specs, making life harder for now-you?  
