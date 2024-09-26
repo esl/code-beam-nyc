@@ -5,6 +5,7 @@ level: Intermediate users, Proficient users
 title: "Distributed Tracing on the BEAM"
 speakers:
 - _participants/zack-kayser.md
+- _participants/ethan-gunderson.md
 
 ---
 Distributed tracing is an essential component to well-instrumented, modern day applications where requests often span across network boundaries and services. Tracing across HTTP services is a relatively common form of distributed tracing and generally works by passing contextual information about a trace in HTTP headers. The OpenTelemetry Specification incorporates a concept known as ""Context Propagation"" that describes this type of mechanism for passing context about an ongoing trace to other services and processes, regardless of where they are running. In OpenTelemetry, we can create our own ""Propagators"" to pass this context along in novel ways that aren't just sending contextual information in HTTP headers.
