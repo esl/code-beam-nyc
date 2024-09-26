@@ -7,7 +7,7 @@ tags:
 - Distributed systems
 - Microbatching
 - Elixir
-title: "Building a Highly Available, Distributed Streaming System Using Only Elixir and The BEAM"
+title: "Riding the Waves of Medical Data: A Journey Through Elixir's Streaming Capabilities"
 speakers:
 - _participants/flora-petterson.md
 - _participants/madison-brown.md
