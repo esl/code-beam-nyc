@@ -6,6 +6,7 @@ type: tutorial
 trainers:
 - _participants/zack-kayser.md
 - _participants/ethan-gunderson.md
+published: false
 
 ---
 Come learn about the tools and techniques needed to instrument an Elixir application.
