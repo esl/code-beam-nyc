@@ -1,6 +1,6 @@
 ---
 name: Madison Brown
-pic_url: "/assets/images/exman.png"
+pic_url: "/assets/images/Madison.jpg"
 tagline: 'Data Integration Engineer @ HCA Healthcare'
 github: 'madxb98'
 
