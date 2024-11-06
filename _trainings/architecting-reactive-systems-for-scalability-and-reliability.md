@@ -6,7 +6,7 @@ name: Architecting Systems for Scalability and Reliability
 type: tutorial
 trainers:
 - _participants/francesco-cesarini.md
-venue: Suite 1 - Medium Conference Room (Davinci Meeting Rooms), 41 Flatbush Ave., Brooklyn, NY 11217 
+venue: "Suite 1, Medium Conference Room (Davinci Meeting Rooms), 41 Flatbush Ave.,  Brooklyn, NY 11217 "
 
 ---
 Learn how to architect fault-tolerant, scalable, soft, real-time systems with requirements for high availability.
