@@ -5,7 +5,7 @@ homepage_settings:
     deadline: 2024-10-14 12:00
   modal:
     show: true
-    delay: 4000
+    delay: 5000
   testimonials:
     show: false
     title: "Testimonials"
