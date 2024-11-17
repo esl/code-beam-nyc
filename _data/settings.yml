@@ -4,8 +4,8 @@ homepage_settings:
     timezone: America/New_York
     deadline: 2024-10-14 12:00
   modal:
-    show: false
-    delay: 5000
+    show: true
+    delay: 4000
   testimonials:
     show: false
     title: "Testimonials"
