@@ -1,0 +1,4192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <title></title>
+  <meta content="width=device-width" name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="A full-day Erlang and Elixir conference in New York City - Nov 15 2024." />
+  <link
+    rel="canonical"
+    href="http://0.0.0.0:4000/"
+  />
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W5JWPV6M');</script>
+  <!-- End Google Tag Manager -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.32/moment-timezone-with-data.min.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Code BEAM Lite NYC 2024</title>
+<meta name="generator" content="Jekyll v4.1.0" />
+<meta property="og:title" content="Code BEAM Lite NYC 2024" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="THE ERLANG AND ELIXIR CONFERENCE NYC | November 15, 2024" />
+<meta property="og:description" content="THE ERLANG AND ELIXIR CONFERENCE NYC | November 15, 2024" />
+<link rel="canonical" href="http://0.0.0.0:4000/" />
+<meta property="og:url" content="http://0.0.0.0:4000/" />
+<meta property="og:image" content="http://0.0.0.0:4000/assets/images/NYC2024-banner.png" />
+<script type="application/ld+json">
+{"url":"http://0.0.0.0:4000/","@type":"WebSite","image":"http://0.0.0.0:4000/assets/images/NYC2024-banner.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://0.0.0.0:4000/assets/images/logonyc.svg"}},"headline":"Code BEAM Lite NYC 2024","description":"THE ERLANG AND ELIXIR CONFERENCE NYC | November 15, 2024","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!--Remove image dragging -->
+  <body ondragstart="return false;" ondrop="return false;">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/assets/font-awesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/font-awesome/css/v4-shims.min.css">
+    <link rel="stylesheet" href="/assets/font-awesome/css/brands.min.css">
+      <link rel="stylesheet" href="/assets/font-awesome/css/solid.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400i,700i"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- WEBSITE ICON IN BROWSER -->
+    <!-- <link href="/css/2016_style/img/icon.png" rel="icon" type="image/png"> -->
+  </body>
+  <script>
+    (function () {
+      window.ldfdr = window.ldfdr || {};
+      (function (d, s, ss, fs) {
+        fs = d.getElementsByTagName(s)[0];
+        function ce(src) {
+          var cs = d.createElement(s);
+          cs.src = src;
+          setTimeout(function () {
+            fs.parentNode.insertBefore(cs, fs);
+          }, 1);
+        }
+        ce(ss);
+      })(
+        document,
+        "script",
+        "https://sc.lfeeder.com/lftracker_v1_bElvO73DxJE4ZMqj.js"
+      );
+    })();
+  </script>
+  <!-- Hotjar Tracking Code for www.elixirconf.eu -->
+  <!-- <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1678389,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script> -->
+</head>
+
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5JWPV6M"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar-fixed-top nav-menu" id="navMenu">
+  <a class="logo" href="#cover"></a>
+  <div class="toggle-menu">
+    <!-- Burger -->
+    <div class="navTrigger">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+  <ul class="nav navigation-bar">
+    
+    
+    <li>
+      <a class="page-scroll" href="#newsletter">2025 Waiting List</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#speakers">Speakers</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#training">Tutorial</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#members">Programme Committee</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#venue">Venue & Hotel</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#sponsors">Sponsors</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#contact">Contact</a>
+    </li>
+    
+    
+    <li>
+          <!-- <div class="dropdown">
+        <a class="dropbtn">Archives
+          <i class="fa fa-caret-down"></i>
+        </a>
+     <div class="dropdown-content">
+          
+
+        </div>
+      </div> -->
+    </li>
+  </ul>
+</nav> <div class="cover" id="cover" style="background-image: url('/assets/images/BG-web green.jpg');">
+  <div class="logo">
+   <img
+      src="/assets/images/CBL_NYC_logo.png"
+      alt="Code BEAM Lite"
+      width="90%"
+    />
+  </div>
+  <div class="col-right">
+    <h4 class="date" style="color: #4DBA12">
+      THE ERLANG AND ELIXIR CONFERENCE
+       <!-- In-person Event<br /> -->
+      <span style="color: #fff; font-size: 22px"><br>NYC | November 15, 2024 <br></span>
+
+      <span style="color: #fff; font-size: 18px"><br >
+        One day celebration of all things BEAM is coming to New York!
+        <br > <br />
+        This event offers a unique opportunity to meet locally,  learn from industry experts, and network with fellow Erlang and Elixir enthusiasts.<br />
+ </span>
+    </h4>
+    <p>
+    <span style="color: #4DBA12;">
+
+
+    </p>
+
+        <!-- highlights -->
+        <!-- Conference and Tutorial Highlights:
+        <br />
+        <a href="/talks/refactoring-via-the-language-server-protocol/">-> Refactoring via the Language Server Protocol</a><br>
+        <a href="/talks/an-elixir-application-to-a-small-hydropower-plant-with-nerves-machines/">-> An Elixir application to a small hydropower plant with Nerves machines</a><br>
+        <a href="/talks/elixir-update/">-> Elixir Update with Andrea Leopardi</a><br>
+        <a href="/talks/deep-dive-in-nx-backends/">-> Deep dive in Nx Backends</a><br>
+        <a href="/trainings/Architecting-reactive-systems/">-> Architecting Reactive Systems with Francesco Cesarini</a>
+        </p> -->
+
+
+        <!-- counter -->
+     <!-- <h4 class="call-for-talks" style="color: #fff; font-size: 22px">
+       <span style="color: #e32dfd;">
+         2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         30+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         300+</span>
+       <br>
+       DAYS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       TRACKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       SPEAKERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       ATTENDEES
+     </h4>
+     <br> -->
+
+     <!-- call for participation  -->
+
+<h4 class="date" style="text-align:left; font-size: 22px">Early Bird sale opens on Sept 12 and will be live until it sells out or until Oct 2!</h4>
+  <!--  <a class="page-scroll btn-outline mb-3 btn-purple" href="#register">REGISTER</a>
+    <!--<a class="page-scroll btn-arrow" href="#welcome">
+      <span class="fa fa-chevron-down"></span>
+    </a>-->
+  </div>
+ <!--  <div class="cover-bottom">
+    <h4 class="call-for-talks" style="color: #fff; font-size: 22px">
+      <span style="color: #e32dfd;">CALL FOR TALKS</span>
+      <br>
+      IS OPEN AND CLOSES ON 17 JULY 2022
+    </h4>
+  </div>-->
+</div>
+
+<!-- end of cover -->
+<!-- start of coundown block -->
+
+<!-- end of coundown -->
+
+<!-- end of banner-2 -->
+<div class="section welcome" id="welcome">
+     <h2 class="title">Share. Learn. Inspire.</h2>
+     <hr/>
+
+     <div class="row align-center">
+         <div class="left-content flex-end">
+             <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" height="400" src="https://www.youtube.com/embed/JVl2x5K1iXY" data-cookieconsent="marketing" width="100%"></iframe>
+         </div>
+         <div class="right-content">
+             <h3 class="text-title mb-1">The Conference for Erlang and Elixir Developers in NYC</h3>
+
+        <p>     We strive to provide a meaningful platform for local Erlang and Elixir communities, and that's why we're organizing Code BEAM Lite in NYC.</br></br>
+Join us to explore the latest advancements in the BEAM ecosystem, including groundbreaking talks on AI & Machine Learning, Fintech, IoT, Security, DevOps and innovative use cases.</br></br>
+This event offers a unique opportunity to meet locally, learn from industry experts, and network with fellow Erlang and Elixir enthusiasts.
+<br></p>
+         </div>
+     </div>
+ </div>
+
+<!-- end of welcome -->
+<div class="banner-1" id="banner-1">
+    <h3 class="text">
+        Would you like to participate as a sponsor of this event? We need support from the community to make Code BEAM Lite NYC the best event it can possibly be. In return, we offer sponsors the opportunity to showcase technology and hire new talent. Explore our sponsorship possibilities!
+    </h3>
+    <a class="page-scroll btn-outline btn-purple ml-1" href="mailto:info@codesync.global?Subject=Sponsoring%20Code%20BEAM%20Lite%20NYC">Sponsorship</a>
+</div>
+
+<!-- end of banner-1  -->
+
+<!-- end of travelling -->
+
+<!-- end of keynotes -->
+<div class="section speakers" id="speakers">
+    <h2 class="title">SPEAKERS</h2>
+    <hr/>
+    <div class="items-container">
+
+        
+        
+
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/sam-aaron/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/1200px-sam_aaron_at_yow-_night_2018_perth-_december_2018_05.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Sam Aaron
+                        </h4>
+                    </a>
+                    <p class="item-position">Live Coding Artist</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/introducing-tau5/">
+                <p class="item-training">
+                    Introducing Tau5 - a new BEAM-powered live coding platform</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/flora-petterson/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/flora_petterson.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Flora Petterson
+                        </h4>
+                    </a>
+                    <p class="item-position">Data Integration Engineer @ HCA Healthcare</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/building-a-highly-available-distributed-streaming-system/">
+                <p class="item-training">
+                    Riding the Waves of Medical Data: A Journey Through Elixir's Streaming Capabilities</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/madison-brown/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/Madison.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Madison Brown
+                        </h4>
+                    </a>
+                    <p class="item-position">Data Integration Engineer @ HCA Healthcare</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/building-a-highly-available-distributed-streaming-system/">
+                <p class="item-training">
+                    Riding the Waves of Medical Data: A Journey Through Elixir's Streaming Capabilities</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/sergey-aleynikov/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/Sergey-Aleynikov.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Sergey Aleynikov
+                        </h4>
+                    </a>
+                    <p class="item-position">Samsung Ads</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/migrating-a-legacy-erlang-system-to-elixir-toolchain/">
+                <p class="item-training">
+                    Migrating a legacy Erlang system to Elixir toolchain</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/mackenzie-morgan/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/mackenzie-morgan.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Mackenzie Morgan
+                        </h4>
+                    </a>
+                    <p class="item-position">Senior Software Engineer</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/relearning-how-to-think/">
+                <p class="item-training">
+                    Relearning How to Think</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/zack-kayser/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/zack-kayser.jpeg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Zack Kayser
+                        </h4>
+                    </a>
+                    <p class="item-position">Senior Software Engineer II at Cars Commerce</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/distributed-tracing-on-the-beam/">
+                <p class="item-training">
+                    Distributed Tracing on the BEAM</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/ethan-gunderson/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/ethan-gunderson.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Ethan Gunderson
+                        </h4>
+                    </a>
+                    <p class="item-position">Principal Software Engineer at Cars.com</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/distributed-tracing-on-the-beam/">
+                <p class="item-training">
+                    Distributed Tracing on the BEAM</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/brett-kolodny/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/brett-kolodny.png');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Brett	Kolodny
+                        </h4>
+                    </a>
+                    <p class="item-position">Fullstack Engineer @ July Technologies Inc.</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/fullstack-gleam-static-types-on-the-beam-and-javascript-you-will-love/">
+                <p class="item-training">
+                    Fullstack Gleam: Static Types on the Beam, and JavaScript You'll Love</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/thomas-millar/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/thomas-millar.jpeg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Thomas Millar
+                        </h4>
+                    </a>
+                    <p class="item-position">Independent ML Engineer</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/i-am-new-to-your-language-and-i-am-here-to-abuse-it/">
+                <p class="item-training">
+                    I'm New To Your Language, And I'm Here To Abuse It</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/ben-marx/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/ben-marx.png');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Ben Marx
+                        </h4>
+                    </a>
+                    <p class="item-position">Senior Director of Software at True Anomaly / Co-author of Adopting Elixir</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/building-mission-critical-systems-with-elixir/">
+                <p class="item-training">
+                    Building Mission Critical Systems with Elixir</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/paulo-valente/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/paulo-valente.png');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Paulo Valente
+                        </h4>
+                    </a>
+                    <p class="item-position">Nx Maintainer and DSP Ethusiast, DockYard</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/nx-powered-photo-filters-with-liveview/">
+                <p class="item-training">
+                    Nx-Powered Photo Filters with LiveView</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/carlo-gilmar/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/carlo-gilmar.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Carlo Gilmar
+                        </h4>
+                    </a>
+                    <p class="item-position">Software Engineer @ Erlang Solutions and Visual Thinker.</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/evolve-your-developer-skills-with-elixir/">
+                <p class="item-training">
+                    From Code to Clarity: Elixir Skills with Visual Thinking</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+    </div>
+</div>
+
+<!-- end of speakers -->
+
+<!-- end of register -->
+
+<!-- end of recordings -->
+
+<!-- end of video -->
+<div class="section schedule" id="schedule">
+    <h2 class="title">SCHEDULE</h2>
+     <hr style="border: 1px solid #fff; width: 80%; margin: 0 auto;"/>
+    <br><br><br><br>
+    <div style="width: 80%; margin: 0 auto;">
+        <table style="width: 100%; border-collapse: collapse; background-color: #000; color: #fff;">
+            <thead>
+                <tr>
+       <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Time</th>
+    <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Talk/Activity</th>
+     <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Speaker</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+          <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">8:30 AM - 9:00 AM</td>
+                    <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Registration</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"></td>
+                </tr>
+                <tr>
+     <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">9:00 AM - 9:10 AM</td>
+         <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Welcome to the Conference</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"></td>
+                </tr>
+                <tr>
+     <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">9:15 AM - 10:00 AM</td>
+             <td style="border: 1px solid #fff; padding: 10px;"><a href="https://codebeamnyc.com/talks/introducing-tau5/" style="color: #4EB813; text-decoration: none;"> Introducing Tau5 - a New BEAM-Powered Live Coding Platform</a> </td>
+                    <td style="border: 1px solid #fff; padding: 10px;"> <a href="https://codebeamnyc.com/participants/sam-aaron/" style="color: #0074A9; text-decoration: none;"> Sam Aaron</a> </td>
+                </tr>
+                <tr>
+<td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">10:05 AM - 10:35 AM</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"><a href="https://codebeamnyc.com/talks/relearning-how-to-think/" style="color: #4EB813; text-decoration: none;"> Relearning How to Think</a> </td>
+                    <td style="border: 1px solid #fff; padding: 10px;"> <a href="https://codebeamnyc.com/participants/mackenzie-morgan/" style="color: #0074A9; text-decoration: none;"> Mackenzie Morgan</a> </td>
+                </tr>
+                <tr>
+    <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">10:35 AM - 11:00 AM</td>
+                 <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Coffee Break</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"></td>
+                </tr>
+                <tr>
+          <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">11:00 AM - 11:30 AM</td>
+        <td style="border: 1px solid #fff; padding: 10px;"><a href="https://codebeamnyc.com/talks/distributed-tracing-on-the-beam/" style="color: #4EB813; text-decoration: none;"> Distributed Tracing on the BEAM</a> </td>
+<td style="border: 1px solid #fff; padding: 10px;">
+    <a href="https://codebeamnyc.com/participants/zack-kayser/" style="color: #0074A9; text-decoration: none;">Zack Kayser</a>  
+    <span style="color: #D3D3D3;"> & </span>  
+    <a href="https://codebeamnyc.com/participants/ethan-gunderson/" style="color: #0074A9; text-decoration: none;">Ethan Gunderson</a>
+</td>
+               </tr>
+                <tr>
+        <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">11:35 AM - 12:05 PM</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"><a href="http://codebeamnyc.com/talks/fullstack-gleam-static-types-on-the-beam-and-javascript-you-will-love/" style="color: #4EB813; text-decoration: none;"> Fullstack Gleam: Static Types on the Beam and JavaScript You'll Love</a> </td>
+                    <td style="border: 1px solid #fff; padding: 10px;"> <a href="https://codebeamnyc.com/participants/brett-kolodny/" style="color: #0074A9; text-decoration: none;"> Brett Kolodny</a> </td>
+                </tr>
+                <tr>
+        <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">12:10 PM - 12:40 PM</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"><a href="https://codebeamnyc.com/talks/i-am-new-to-your-language-and-i-am-here-to-abuse-it//" style="color: #4EB813; text-decoration: none;"> I'm new to your language and I'm here to abuse it</a> </td>
+                    <td style="border: 1px solid #fff; padding: 10px;"> <a href="https://codebeamnyc.com/participants/thomas-millar/" style="color: #0074A9; text-decoration: none;"> Thomas Millar</a> </td>
+                </tr>
+                <tr>
+  <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">12:40 PM - 1:40 PM</td>
+       <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Lunch</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"></td>
+                </tr>
+                <tr>
+      <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">1:40 PM - 2:10 PM</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"><a href="http://codebeamnyc.com/talks/building-mission-critical-systems-with-elixir//" style="color: #4EB813; text-decoration: none;"> Building Mission Critical Systems with Elixir</a> </td>
+<td style="border: 1px solid #fff; padding: 10px;"> <a href="https://codebeamnyc.com/participants/ben-marx/" style="color: #0074A9; text-decoration: none;"> Ben Marx</a> </td>
+                </tr>
+                <tr>
+      <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">2:15 PM - 2:45 PM</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"><a href="https://codebeamnyc.com/talks/nx-powered-photo-filters-with-liveview/" style="color: #4EB813; text-decoration: none;"> Nx-powered Photo Filters with LiveView</a> </td>
+<td style="border: 1px solid #fff; padding: 10px;"> <a href="https://codebeamnyc.com/participants/paulo-valente/" style="color: #0074A9; text-decoration: none;"> Paulo Valente</a> </td>
+                </tr>
+                <tr>
+       <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">2:50 PM - 3:20 PM</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"><a href="https://codebeamnyc.com/talks/migrating-a-legacy-erlang-system-to-elixir-toolchain/" style="color: #4EB813; text-decoration: none;"> Migrating a Legacy Erlang System to Elixir Toolchain</a> </td>
+<td style="border: 1px solid #fff; padding: 10px;"> <a href="https://codebeamnyc.com/participants/sergey-aleynikov/" style="color: #0074A9; text-decoration: none;"> Sergey Aleynikov</a> </td>
+                </tr>
+                <tr>
+<td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">3:20 PM - 3:45 PM</td>
+<td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Coffee Break</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"></td>
+                </tr>
+                <tr>
+     <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">3:45 PM - 4:15 PM</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"><a href="https://codebeamnyc.com/talks/evolve-your-developer-skills-with-elixir/" style="color: #4EB813; text-decoration: none;"> From Code to Clarity: Elixir Skills with Visual Thinking</a> </td>
+                    <td style="border: 1px solid #fff; padding: 10px;"> <a href="https://codebeamnyc.com/participants/carlo-gilmar/" style="color: #0074A9; text-decoration: none;"> Carlo Gilmar</a> </td>
+                </tr>
+                <tr>
+     <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">4:20 PM - 4:50 PM</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"><a href="https://codebeamnyc.com/talks/building-a-highly-available-distributed-streaming-system/" style="color: #4EB813; text-decoration: none;"> Building a Highly Available, Distributed Streaming System Using Only Elixir and The BEAM</a> </td>
+               <td style="border: 1px solid #fff; padding: 10px;">
+    <a href="https://codebeamnyc.com/participants/flora-petterson/" style="color: #0074A9; text-decoration: none;">Flora Petterson</a>  
+    <span style="color: #D3D3D3;"> & </span>  
+    <a href="https://codebeamnyc.com/participants/madison-brown/" style="color: #0074A9; text-decoration: none;">Madison Brown</a>
+</td>
+               </tr>
+                <tr>
+<td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">4:55 PM - 5:00 PM</td>
+ <td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Closing Notes</td>
+                    <td style="border: 1px solid #fff; padding: 10px;"></td> 
+                </tr>
+                <tr>
+<td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">5:00 PM - 6:00 PM</td>
+<td style="border: 1px solid #fff; padding: 10px; color: #D3D3D3; font-family: 'Helvetica Neue', sans-serif;">Drinks & Networking </td>
+                    <td style="border: 1px solid #fff; padding: 10px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </hr>
+ </div>
+
+<!-- end of schedule -->
+
+<!-- end of hybrid -->
+
+<!-- end of lightningtalks -->
+
+<!-- end of trainers -->
+<div class="section training" id="training">
+    <h2 class="title">TUTORIAL</h2>
+    <hr />
+    <div class="table-container">
+        
+
+        
+
+        
+        <div class="table-item">
+<div class="item-col item-hours" onload="this.innerText = 'foo'">
+    
+    
+
+    
+        Nov 14, 2024 09:00 AM - 05:00 PM EST
+    
+</div>
+
+            <div class="item-col item-training">
+                <a href="/trainings/architecting-reactive-systems-for-scalability-and-reliability/">
+                    <p class="item-title">Architecting Reactive Systems For Scalability And Reliability
+                    </p>
+                </a>
+                
+                
+
+
+                <a href="/participants/francesco-cesarini/">
+                    <p class="item-trainer">Trainer:
+                        Francesco Cesarini</p>
+                </a>
+                
+            </div>
+
+        </div>
+        
+        
+    </div>
+</div>
+
+<!-- end of training -->
+
+<!-- end of banner-3 -->
+
+<!-- end of diversity -->
+
+<!-- end of volunteer -->
+
+<!-- end of cft  -->
+<div class="section speakers" id="members">
+    <h2 class="title">PROGRAMME COMMITTEE</h2>
+    <hr/>
+    <div class="items-container">
+
+        
+        
+
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/sophie-debenedetto/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/sophie-debenedetto.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Sophie DeBenedetto
+                        </h4>
+                    </a>
+                    <p class="item-position">Senior Software Engineer for GitHub</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/dave-lucia/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/dave-lucia.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Dave Lucia
+                        </h4>
+                    </a>
+                    <p class="item-position">TV Labs CTO</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/francesco-cesarini/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/francesco-cesarini.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Francesco Cesarini
+                        </h4>
+                    </a>
+                    <p class="item-position">Founder and Technical Director of Erlang Solutions</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+    </div>
+</div>
+
+<!-- end of members  -->
+
+<!-- end of hotels -->
+
+<!-- end of covid-19 -->
+
+<!-- end of shop -->
+
+<!-- end of blog -->
+
+<!-- end of banner-5 -->
+<div class="section venue" id="venue" style="background-image: url('/assets/images/littlefield.jpg');">
+    <div class="row">
+        <div class="left-content left">
+            <h2 class="title">VENUE</h2>
+            <hr/>
+            <p class="venue-subtitle">Littlefield</p>
+            <p class="venue-text">635 Sackett St,<br>
+                Brooklyn,<br>
+              NY 11217</p>
+                <h2 class="venue-subtitle">
+                  <strong><a href="https://littlefieldnyc.com/info/" style="color: #4DBA12" target="_blank">VENUE DETAILS</a><br>
+                </h2>
+
+
+        <h2 class="venue-subtitle">ACCOMMODATION</h2><br>
+        <p>We have secured rooms at the Tru by Hilton Brooklyn Hotel from $289 (including taxes & breakfast). To book please follow <a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=JFKIBRU&groupCode=BEA&arrivaldate=2024-11-13&departuredate=2024-11-15&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" style="color: #4DBA12" target="_blank">this link.</a></p>
+        </div>
+        <div class="right-content">
+            <br/>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf-F7nBzxi_73uI9QUxRQ-cNihYtlZ_AA"></script>
+<div>
+    <div id="gmap_canvas"></div>
+</div>
+<script type="text/javascript">
+    function init_map() {
+        var myOptions = {
+            zoom: 14,
+            scrollwheel: false,
+            center: new google.maps.LatLng(40.67875709829897, -73.98338124907563),
+            mapTypeId: google
+                .maps
+                .MapTypeId
+                .ROADMAP,
+            styles: [
+                {
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#f5f5f5"
+                        }
+                    ]
+                }, {
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                }, {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                    ]
+                }, {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#f5f5f5"
+                        }
+                    ]
+                }, {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#bdbdbd"
+                        }
+                    ]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#eeeeee"
+                        }
+                    ]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#e5e5e5"
+                        }
+                    ]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                }, {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#dadada"
+                        }
+                    ]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                    ]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                }, {
+                    "featureType": "transit.line",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#e5e5e5"
+                        }
+                    ]
+                }, {
+                    "featureType": "transit.station",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#eeeeee"
+                        }
+                    ]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#c9c9c9"
+                        }
+                    ]
+                }, {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                }
+            ]
+        };
+        map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+        marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(40.67875709829897, -73.98338124907563)
+        });
+        infowindow = new google.maps.InfoWindow({content: "<span><strong>Littlefield</strong><br>635 Sackett St, Brooklyn, NY 11217, United States<br><span>"});
+        google
+            .maps
+            .event
+            .addListener(marker, "click", function () {
+                infowindow.open(map, marker);
+            });
+        infowindow.open(map, marker);
+    }
+    google
+        .maps
+        .event
+        .addDomListener(window, "load", init_map);
+</script>
+
+        </div>
+    </div>
+
+
+</div>
+
+<!-- end of venue -->
+<div class="section sponsor" id="sponsors">
+    <h2 class="title">SPONSORS</h2>
+    <hr/>
+
+  <!-- <p class="section-text">
+        Nulla a tellus at turpis gravida congue non interdum et malesuada fames ac
+                                                                                            ante ipsum primis
+    </p> -->
+
+<div class="row sponsors">
+      <!--    <h2 class="sponsor-title">Diversity & Inclusion Sponsor</h2>
+          <a href="https://www.pepsico.com" target="_blank">
+               <img src="/assets/images/sponsors/pepsi.png" alt="PepsiCo"/>
+          </a>
+      <h2 class="sponsor-title">Platinum Sponsors</h2>
+            <a href="https://www.emqx.com/en" target="_blank">
+                 <img src="/assets/images/sponsors/EMQ-Logo.png" alt="EMQ" />
+            </a>
+            <a href="https://jobs.lever.co/teller" target="_blank">
+                 <img src="/assets/images/sponsors/Teller-logo.png" alt="Teller" />
+            </a>
+        <h2 class="sponsor-title">Platinum Sponsors</h2>
+                  <a href="https://www.kivra.se" target="_blank">
+                       <img src="/assets/images/Kivra_Logo.png" alt="Kivra" style="height: 5em;">
+                  </a>
+                &nbsp
+                            <a href="https://www.aeternity.com/" target="_blank">
+                                <img src="/assets/images/Aeternity2.png" alt="aeternity" style="height: 5em;">
+                            </a>
+<br/><br/><br /><br  />-->
+        <h2 class="sponsor-title">Platinum Sponsors</h2>
+
+            <a href="https://www.erlang-solutions.com/" target="_blank">
+                <img src="/assets/images/erlang-solutions-logo_erlang-solutions-logo-black.png" alt="erlang solutions">
+            </a>
+           
+             <a href="https://careers.draftkings.com/" target="_blank">
+                <img src="/assets/images/DraftKings_Tagline_Stacked_FC.png" alt="draft kings">
+            </a>
+
+         <h2 class="sponsor-title">Silver Sponsors</h2>
+
+
+                <a href="https://www.wyeworks.com/" target="_blank">
+                    <img src="/assets/images/Wyeworks-Logo-Black-Red.png" alt="WyeWorks" />
+                </a>
+
+                 <a href="https://www.mimiquate.com/" target="_blank">
+                    <img src="/assets/images/Mimiquate.png" alt="Mimiquate" />
+                </a>
+
+   <!--  <h2 class="sponsor-title">Gold Sponsor</h2>
+
+
+                <a href="https://stritzinger.com" target="_blank">
+                    <img src="/assets/images/grisp-io_.png" alt="Peer Stritzinger"  style="height: 9em;"/>
+                </a> -->
+
+
+
+        <!-- Sponsors Carousel -->
+                    <!-- <div id="testimonials-carousel" class="sponsor-testimonial">
+      
+      <h3 class="name">Johnatan Doe</h3>
+
+      
+      <h3 class="name">Adam Smith</h3>
+
+      
+      <h3 class="name">Irene Warner</h3>
+
+      
+      <h3 class="name">Richard Ryan</h3>
+
+      
+    </div> -->
+    </div>
+</div>
+
+<!-- end of sponsors -->
+<!-- start of  testimonials  block -->
+
+<!-- end of  testimonials  block -->
+
+
+<!-- end of gallery-grid  -->
+<div class="section newsletter" id="newsletter">
+    <h2 class="title">Join the Waiting List</h2>
+    <hr/>
+    <p class="section-text mb-3">
+    Be the first to get access to discounted tickets and news about the event! Just subscribe to the event mailing list.
+
+
+    </p>
+    <div class="form-container">
+        <iframe allowtransparency="true" frameborder="0" height="600" src="https://www2.codesync.global/l/23452/2024-11-15/7mxmdh" style="border: 0" type="text/html" width="100%"></iframe>
+
+
+    </div>
+</div>
+
+<!-- end of newsletter -->
+<div class="section contact" id="contact">
+    <h2 class="title">CONTACT US</h2>
+    <hr/>
+    <p class="section-text mb-3">
+    Questions? Leave Us A Message.
+    </p>
+
+    <a class="page-scroll btn-outline btn-purple ml-1" href="mailto:info@codesync.global?Subject=Code BEAM Lite NYC">Send Message</a>
+</div>
+
+<!-- end of contact -->
+
+
+<!-- modal block -->
+
+  <!-- The modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <!-- modal content here -->
+    <h3 class="title">See you in San Francisco!</h3>
+    <p> Code BEAM Lite NYC 2024 ended, make sure not to miss our main event in the US, Code BEAM America.
+    </p>
+    <a id="btn-modal" class="page-scroll btn-outline btn-orange mb-4 mt-4 btn-orange inline-block" href="https://codebeamamerica.com" target="_blank">
+      Check now
+    </a>
+  </div>
+</div>
+
+<script>
+  // Get the modal element
+  var modal = document.getElementById("myModal");
+
+  // Get the <span> element that closes the modal
+  var closeBtn = document.getElementsByClassName("close")[0];
+  var btn = document.getElementById('btn-modal');
+
+  // Function to open the modal
+  function openModal() {
+    modal.style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Event listener to close the modal when the close button is clicked
+  closeBtn.addEventListener("click", closeModal);
+  btn.addEventListener("click", closeModal);
+
+  // Event listener to close the modal when clicking on the backdrop
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Event listener to close the modal when the "Escape" key is pressed
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  // Open the modal after given delay seconds
+  setTimeout(openModal, "5000");
+</script>
+
+
+ <div class="footer" id="footer">
+  <div class="social-icons">
+    <a href="https://www.youtube.com/c/CodeSync" target="_blank">
+      <svg
+        aria-hidden="true"
+        data-prefix="fab"
+        data-icon="youtube"
+        class="svg-inline--fa fa-youtube fa-w-18"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 576 512"
+      >
+        <path
+          fill="#4DBA12"
+          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+        ></path>
+      </svg>
+    </a>
+    <a href="https://twitter.com/codebeamio?lang=en" target="_blank">
+      <svg
+        aria-hidden="true"
+        data-prefix="fab"
+        data-icon="twitter"
+        class="svg-inline--fa fa-twitter fa-w-16"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="#4DBA12"
+          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+        ></path>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/code-sync/" target="_blank">
+      <svg
+        aria-hidden="true"
+        data-prefix="fab"
+        data-icon="linkedin-in"
+        class="svg-inline--fa fa-linkedin-in fa-w-14"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="#4DBA12"
+          d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z"
+        ></path>
+      </svg>
+    </a>
+  </div>
+  <hr />
+  <p>All Rights Reserved</p>
+  <p>
+    <strong>Code Sync</strong>
+    © 2024 Copyright
+  </p>
+  <p>
+    <strong>Organised by</strong>
+    <a href="https://codesync.global">Code Sync</a> powered by <a href="https://www.erlang-solutions.com/?utm_source=elixirconf&utm_medium=referral">Erlang Solutions</a>
+  </p>
+
+  <p>
+    <br />
+      
+      <a href="https://codesync.global/terms_and_conditions/"> Terms of Use</a>
+      |
+      <a href="https://codesync.global/about-us/#Conduct"> Code of Conduct</a>
+      |
+      <a href="https://codesync.global/privacy_policy/"> Privacy Policy</a>
+      |
+      <a href="https://codesync.global/page/18/"> Anti-Slavery Policy</a>
+
+  </p>
+</div>
+
+    <!-- jQuery Version 1.11.0 -->
+<script src="/assets/js/jquery-1.11.0.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/assets/js/jquery.easing.min.js"></script>
+<script src="/assets/js/classie.js"></script>
+<script src="/assets/js/cbpAnimatedHeader.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/assets/js/agency.js"></script>
+
+<!-- Owl Carousel -->
+<script src="/assets/js/owl.carousel.min.js" charset="utf-8"></script>
+
+
+<!-- Parallaxing & SmoothScroll -->
+<script src="/assets/js/scrollax.min.js" charset="utf-8"></script>
+
+
+
+<!-- Main JS -->
+<script src="/assets/js/main.js" charset="utf-8"></script>
+<script type="text/javascript">
+piAId = '24452';
+piCId = '63005';
+piHostname = 'pi.pardot.com';
+
+(function() {
+function async_load(){
+var s = document.createElement('script'); s.type = 'text/javascript';
+s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+}
+if(window.attachEvent) { window.attachEvent('onload', async_load); }
+else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+
+  </body>
+</html>
